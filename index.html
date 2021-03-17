@@ -120,11 +120,11 @@
             <h1>HABLEMOS</h1>
             <p>Si está interesado en trabajar conmigo en su próximo proyecto, no dude en ponerse en contacto conmigo.</p>
             <div class="nombre"><label for="text">Nombre completo</label>
-            <input type="text" placeholder="Nombre"></div>
+            <input type="text" placeholder="Nombre" id="input1"></div>
             <div class="mail"><label for="text">Correo electrónico</label>
-            <input type="mail" placeholder="Usuario@mail.com"></div>
+            <input type="mail" placeholder="Usuario@mail.com" id="input2"></div>
             <div class="mensaje"><label for="text">Mensaje</label>
-            <input type="text" placeholder="Ingrese su mensaje aqui"></div>
+            <input type="text" placeholder="Ingrese su mensaje aqui" id="input3"></div>
             <button class="btnEnviar" onclick=sendForm()>ENVIAR MENSAJE</button> 
         </section>
 
@@ -145,11 +145,20 @@
 
 <script>
     function sendForm(){
+        
+        let nombre = document.getElementById('input1');
+        let mail = document.getElementById('input2');
+        let mensaje = document.getElementById('input3');
+        
         Swal.fire(
                 'Enviado',
                 'Elisa recibio tu formulario',
                 'success'
               )
+            
+            nombre.value='';
+            mail.value='';
+            mensaje.value='';
     }
 
     function noSocials(){
