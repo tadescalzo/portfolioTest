@@ -203,7 +203,7 @@ ul {
 
 .preProyectos p,
 img {
-  margin: 20px;
+  margin: 20px 0px;
 }
 
 .preProyectosDesc1{
@@ -324,7 +324,7 @@ h3 {
   background-color: black;
   color: var(--button-primary);
   padding: 0.5rem;
-  width: 40%;
+  width: fit-content;
   text-align: center;
   box-shadow: -3px 3px 0px white;
   font-size: 2rem;
